@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+.hero{
+    width: 95%;
+    min-height: 99vh;
+    background-image: url(back-image.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+
+}
+
+nav {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+.login-btn{
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881,#c430d7 );
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+}
+
+.content{
+    margin-top: 10%;
+    max-width: 590px;
+}
+
+.content h1{
+    font-size: 54px;
+    color:#222;
+}
+
+.content p{
+    margin: 9px 0px 26px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+
+.content .btn{
+    padding: 15px 80px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+
+.btn:hover{
+    border-top-right-radius: 30px;
+}
+
+.feature-img{
+    width: 530px;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+   
+}
+
+.feature-img.anim{
+    animation-delay: 1.5s;
+}
+
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* @media screen and (max-width: 1323px){
+    .content h1{
+        font-size: 44px;
+    }
+
+    .content p{
+        font-size: 14px;
+        max-width: 490px;
+    }
+
+    .feature-img{
+        width: 490px;
+        bottom: 5px;
+    }
+
+    .content{
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .content h1{
+        font-size: 34px;
+    }
+
+    .content p{
+        font-size: 14px;
+        max-width: 490px;
+    }
+
+    .feature-img{
+        width: 290px;
+        bottom: 5px;
+    }
+
+    .content{
+        margin-top: 20%;
+    }
+} */
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        padding: 10px 5%;
+    }
+    
+    .content {
+        margin-top: 15%;
+        max-width: 450px;
+    }
+    
+    .feature-img {
+        width: 450px;
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    
+    nav ul {
+        margin: 10px 0;
+    }
+    
+    nav ul li {
+        margin: 8px 12px;
+    }
+    
+    .content {
+        margin-top: 20%;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .content h1 {
+        font-size: 40px;
+    }
+    
+    .content p {
+        font-size: 14px;
+    }
+    
+    .feature-img {
+        width: 350px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 10px 3%;
+        min-height: auto;
+    }
+    
+    nav {
+        padding: 10px 0;
+    }
+    
+    .logo {
+        width: 120px;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px 8px;
+    }
+    
+    .login-btn {
+        margin-right: 10px;
+    }
+    
+    .btn {
+        padding: 12px 30px;
+        font-size: 13px;
+    }
+    
+    .content {
+        margin-top: 25%;
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .content h1 {
+        font-size: 28px;
+    }
+    
+    .content p {
+        font-size: 13px;
+        margin: 8px 0 20px;
+    }
+    
+    .content .btn {
+        padding: 12px 60px;
+        font-size: 14px;
+    }
+    
+    .feature-img {
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px 150px;
+        display: block;
+    }
+}

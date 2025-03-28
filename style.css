@@ -257,3 +257,188 @@ ul a {
     height: 50px;
     width: 100px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1024px (Tablets) */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav-search {
+        width: 500px;
+    }
+
+    .box {
+        width: 45%;
+    }
+
+    .hero-section {
+        height: 300px;
+    }
+
+    .panel-ops {
+        width: 60%;
+    }
+}
+
+/* For screens smaller than 768px (Small Tablets and Large Mobiles) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-logo {
+        margin-bottom: 10px;
+    }
+
+    .nav-address, .nav-signin, .nav-return, .nav-cart {
+        margin: 5px 0;
+    }
+
+    .nav-search {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .panel {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .panel-ops {
+        width: 100%;
+        text-align: center;
+    }
+
+    .panel-ops p {
+        margin: 5px 10px;
+    }
+
+    .panel-deals {
+        margin-top: 10px;
+    }
+
+    .hero-section {
+        height: 200px;
+    }
+
+    .hero-mssg {
+        width: 90%;
+        font-size: 0.75rem;
+    }
+
+    .box {
+        width: 48%;
+    }
+
+    .foot-panel2 {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .foot-panel2 ul {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+/* For screens smaller than 480px (Mobiles) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .nav-logo {
+        width: 90px;
+        height: 40px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .nav-address, .nav-signin, .nav-return, .nav-cart {
+        font-size: 0.75rem;
+    }
+
+    .nav-cart i {
+        font-size: 24px;
+    }
+
+    .nav-search {
+        height: 35px;
+    }
+
+    .search-select {
+        width: 40px;
+    }
+
+    .search-icon {
+        width: 40px;
+        font-size: 1rem;
+    }
+
+    .panel-ops p {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .panel-deals {
+        font-size: 0.75rem;
+    }
+
+    .hero-section {
+        height: 150px;
+    }
+
+    .hero-mssg {
+        width: 95%;
+        font-size: 0.65rem;
+        height: 30px;
+    }
+
+    .box {
+        width: 100%;
+        height: 350px;
+    }
+
+    .box-img {
+        height: 250px;
+    }
+
+    .foot-panel2 ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    .foot-panel1 {
+        font-size: 0.75rem;
+        height: 40px;
+    }
+
+    .foot-panel3 {
+        height: 50px;
+    }
+}

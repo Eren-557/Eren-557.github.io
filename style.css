@@ -1,112 +1,114 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-body{
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position-y: -55px;
+    background-repeat: no-repeat;
+    display: flex;
     overflow: hidden;
-    animation: shakebody linear 6s infinite;
-}
-
-.sky{
-    height: 100vh;
-    width: 100%;
-    background-image: url(background.jpg);
-    background-repeat: no-repeat;
-    position: absolute;
-}
-
-.trees{
-    height: 100vh;
-    width: 100%;
-    background-image: url(trees.png);
-    background-size: cover;
-    position: absolute;
-    top: -134px;
-}
-
-.track{
-    height: 60vh;
-    width: 800vw;
-    background-image: url(track.png);
-    background-repeat: repeat-x;
-    position: absolute;
-    top: 70vh;
-    animation: carMove linear 13s infinite;
-}
-
-.car{
-    height: 100px;
-    width: 380px;
-    background-image: url(car_body.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 304px;
-    bottom: 30vh;
-    animation: shake linear .3s infinite;
-}
-
-
-
-.wheel1 img{
-    width: 69px;
     position: relative;
-    top: 40px;
-    left: 47px;
-    animation: wheelRotation linear .16s infinite;
+} 
+
+.taskbar{
+    width: 100%;
+    height: 47px;
+    background-color: #f3f3f3;;
+    align-self: flex-end;
+    text-align: center;
+
 }
 
-.wheel2 img {
-    width: 73px;
-    position: relative;
-    top: -32px;
-    left: 236px;
-    animation: wheelRotation linear .16s infinite;
+.right{
+    position: absolute;
+    right: 0;
 }
 
-@keyframes wheelRotation
-{
-    100%{
-        transform: rotate(360deg);
-    }
+.icons {
+    height: 44vh;
+    width: 12vw;
+    /* background-color: antiquewhite; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+    margin-left: -10px;
+    margin-top: 12px;
 }
 
-@keyframes carMove
-{
-    100%{
-        transform: translateX(-500vw);
-    }
+.startmenu{
+    height: 653px;
+    width: 630px;
+    position: absolute;
+    /* bottom: 50px; */
+    bottom: -640px;
+    left: 490px;
+    transition: all 0.2s cubic-bezier(0, 0.3, 1, 0.94);
+
+}
+
+.startmenu img{
+    border-radius: 10px;
 }
 
 
-@keyframes shake
-{
-    0%{
-        transform: translateY(-5px);
-    }
 
-    50%{
-        transform: translateY(5px);
-    }
-
-    100%{
-        transform: translateY(-5px);
-    }
+.icons_pop {
+    position: absolute;
+    left: 370px;
+    top: 100px;
+    z-index: 999; /* Higher than other elements */
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.9);
 }
 
-@keyframes shakebody
-{
-    0%{
-        transform: translateY(-50px);
-    }
-
-    50%{
-        transform: translateY(50px);
-    }
-
-    100%{
-        transform: translateY(-50px);
-    }
+.icons_pop img {
+    width: 100%; 
+    display: block;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icons img{
+    height: 50px;
+
+}
+
+.icons p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+
+}

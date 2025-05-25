@@ -75,12 +75,12 @@
 
     <script src="https://unpkg.com/vapi-sdk@2.1.0/dist/vapi.js"></script>
     <script>
-        const vapi = new Vapi('YOUR_PUBLIC_KEY');
+        const vapi = new Vapi('0ec4ce0e-c6c6-4709-ad56-c6a4f1c0bdb2'); // Replace with actual public key
         document.getElementById('start-vapi').addEventListener('click', () => {
-        vapi.start('YOUR_ASSISTANT_ID', {
-        firstMessage: 'Hello! How can I assist you today?'
+            vapi.start('aa66a8fb-3299-4ed8-b227-c4e68c5e3929', { // Replace with actual assistant ID
+                firstMessage: 'Hello! How can I assist you today?'
+            });
         });
-    });
     </script>
     <script src="script.js"></script>
 </body>

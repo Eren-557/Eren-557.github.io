@@ -96,12 +96,6 @@
 
 
 
-
-
-
-
-
-
 .icons img{
     height: 50px;
 
@@ -112,3 +106,55 @@
     font-size: 13px;
 
 }
+
+
+
+  #start-vapi {
+    /* Small, circular shape */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Makes it fully circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove default padding */
+    z-index: 500;
+    
+    /* Styling */
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    cursor: pointer;
+    font-size: 14px; /* Smaller text */
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* Smooth transition for hover effects */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+
+  /* Hover effect */
+  #start-vapi:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  }
+
+  /* Active state (when clicked) */
+  #start-vapi:active {
+    transform: scale(0.95); /* Slight shrink on click */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Accessibility: Focus state for keyboard navigation */
+  #start-vapi:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3); /* Focus ring */
+  }
+
+  /* Optional: Add an icon or text inside */
+  #start-vapi::before {
+    content: '🎙️'; /* Microphone emoji or replace with text/icon */
+    font-size: 20px; /* Adjust size of icon */
+  }

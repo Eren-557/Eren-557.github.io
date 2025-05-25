@@ -69,9 +69,19 @@
             <img src="c_panel1.png" width="">
         </div>
 
+        <button id="start-vapi">Start Assistant</button>
+
     </div>
 
-
+    <script src="https://unpkg.com/vapi-sdk@2.1.0/dist/vapi.js"></script>
+    <script>
+        const vapi = new Vapi('YOUR_PUBLIC_KEY');
+        document.getElementById('start-vapi').addEventListener('click', () => {
+        vapi.start('YOUR_ASSISTANT_ID', {
+        firstMessage: 'Hello! How can I assist you today?'
+        });
+    });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

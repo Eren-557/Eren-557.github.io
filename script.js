@@ -30,3 +30,5 @@ c_panel.addEventListener("dblclick", ()=>{
         icons_img.style.visibility = 'hidden';
     }
 })
+
+

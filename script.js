@@ -31,4 +31,3 @@ c_panel.addEventListener("dblclick", ()=>{
     }
 })
 
-

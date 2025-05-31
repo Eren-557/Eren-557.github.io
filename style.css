@@ -1,110 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.container{
-    height: 100vh;
-    width: 100vw;
-    background-image: url(bg.jpg);
-    background-size: cover;
-    background-position-y: -55px;
-    background-repeat: no-repeat;
+body {
+  background-color: black;
+}
+
+:root {
+  --themeColor: rgb(230, 54, 54);
+}
+
+
+.nav{
+    height:40px;
+    background-color: rgb(0, 0, 0);
     display: flex;
-    overflow: hidden;
-    position: relative;
-} 
-
-.taskbar{
-    width: 100%;
-    height: 47px;
-    background-color: #f3f3f3;;
-    align-self: flex-end;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 
 }
 
-.right{
-    position: absolute;
-    right: 0;
+.details{
+    margin-right: 50px;
 }
 
-.icons {
-    height: 44vh;
-    width: 12vw;
-    /* background-color: antiquewhite; */
-    position: absolute;
+
+
+.l{
     display: flex;
-    justify-content: center;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    gap: 15px 30px;
-    margin-left: -10px;
-    margin-top: 12px;
+    gap: 0px 30px;
 }
 
-.startmenu{
-    height: 653px;
-    width: 630px;
-    position: absolute;
-    /* bottom: 50px; */
-    bottom: -640px;
-    left: 490px;
-    transition: all 0.2s cubic-bezier(0, 0.3, 1, 0.94);
+.l li{
+    font-size: 17px;
+    list-style: none;
+    font-weight: bold;
+    color: rgb(206, 206, 206);
+    transition: color 0.2s ease-in;
+    cursor: pointer;
+}
+
+.l li:hover, .l li:active{
+    color: var(--themeColor);
+    border-bottom: 3px solid var(--themeColor);
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--themeColor);
+    margin-left: 50px;
+}
+
+.profile-pic img{
+    border-radius: 50%;
+    height: 650px;
+    width: 580px;
+}
+
+.profile-pitch{
+    width: 44vw;
+    margin-left: -150px;
+}
+
+
+.profile-pitch h1{
+    font-size: 50px;
+    color: aliceblue;
+}
+
+.profile-pitch h2{
+    font-size: 35px;
+    color: aliceblue;
+    margin-top: -10px;
+}
+
+
+
+.profile-pitch p{
+    color: aliceblue;
+    margin-top: 7px;
 
 }
 
-.startmenu img{
-    border-radius: 10px;
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icons i{
+    color: var(--themeColor);
+    outline: 1px solid var(--themeColor);
+    outline-offset: 10px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-right: 25px;
+
+}
+
+.icons{
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 
+.btn{
+    margin-top: 19px;
+    font-size: 14px;
+    padding: 9px 30px;
+    border: 1px solid var(--themeColor);
+    border-radius: 20px;
+    color: var(--themeColor);
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
 
-.icons_pop {
-    position: absolute;
-    left: 370px;
-    top: 100px;
-    z-index: 999; /* Higher than other elements */
+.btn:hover{
+    background-color: var(--themeColor);
+    color: white;
     transition: all 0.3s ease-in-out;
-    transform: scale(0.9);
 }
 
-.icons_pop img {
-    width: 100%; 
-    display: block;
-}
+@media (max-width: 768px) {
+    .hero-section{
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .profile-pic img{
+        width: 300px;
+        height: auto;
+    }
 
+    .profile-pitch{
+        width: 80vw;
+        margin-left: 0;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.icons img{
-    height: 50px;
 
 }
-
-.icons p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-
-}
-
-

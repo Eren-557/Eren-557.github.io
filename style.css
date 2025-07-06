@@ -1,147 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
-*{
+body{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background-color: black;
-}
-
-:root {
-  --themeColor: rgb(230, 54, 54);
-}
-
-
-.nav{
-    height:40px;
-    background-color: rgb(0, 0, 0);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
 
 }
 
-.details{
-    margin-right: 50px;
+h1{
+    font-size: 3.5rem;
+    color: hsl(0, 0%, 20%);
 }
 
-
-
-.l{
-    display: flex;
-    gap: 0px 30px;
+.choices{
+    margin-bottom: 30px;
 }
 
-.l li{
-    font-size: 17px;
-    list-style: none;
-    font-weight: bold;
-    color: rgb(206, 206, 206);
-    transition: color 0.2s ease-in;
+.choices button{
+    font-size: 7.5rem;
+    min-width:160px ;
+    margin: 0 10px;
+    border-radius: 250px;
+    background-color: hsl(200, 100%, 50%);
     cursor: pointer;
+    transition: background-color 0.5s ease;
 }
 
-.l li:hover, .l li:active{
-    color: var(--themeColor);
-    border-bottom: 3px solid var(--themeColor);
+.choices button:hover{
+    background-color: hsl(200, 100%, 70%);
 }
 
-.logo{
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--themeColor);
-    margin-left: 50px;
+#playerDisplay, #computerDisplay{
+    font-size: 2.5rem;
 }
 
-.profile-pic img{
-    border-radius: 50%;
-    height: 650px;
-    width: 580px;
+#resultDisplay{
+    font-size: 5rem;
+    margin: 30px 0px;
 }
 
-.profile-pitch{
-    width: 44vw;
-    margin-left: -150px;
+.scoreDisplay{
+    font-size: 2rem;
 }
 
-
-.profile-pitch h1{
-    font-size: 50px;
-    color: aliceblue;
+.greenText, #playerScoreDisplay{
+    color: rgb(156, 248, 156);
 }
 
-.profile-pitch h2{
-    font-size: 35px;
-    color: aliceblue;
-    margin-top: -10px;
+.redText, #computerScoreDisplay{
+    color: rgb(250, 94, 94);
 }
 
-
-
-.profile-pitch p{
-    color: aliceblue;
-    margin-top: 7px;
-
-}
-
-.hero-section{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.icons i{
-    color: var(--themeColor);
-    outline: 1px solid var(--themeColor);
-    outline-offset: 10px;
-    border-radius: 50%;
-    margin-top: 15px;
-    margin-right: 25px;
-
-}
-
-.icons{
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-
-.btn{
-    margin-top: 19px;
-    font-size: 14px;
-    padding: 9px 30px;
-    border: 1px solid var(--themeColor);
-    border-radius: 20px;
-    color: var(--themeColor);
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-}
-
-.btn:hover{
-    background-color: var(--themeColor);
-    color: white;
-    transition: all 0.3s ease-in-out;
-}
-
-@media (max-width: 768px) {
-    .hero-section{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-pic img{
-        width: 300px;
-        height: auto;
-    }
-
-    .profile-pitch{
-        width: 80vw;
-        margin-left: 0;
-    }
-
-
-}

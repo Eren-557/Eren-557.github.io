@@ -3,52 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="icon" href="poop.png" type="image/x-icon">
-
+    <title>Rock Paper Scissor</title>
 </head>
 <body>
+    
+    <h1>Rock - Paper - Scissor</h1>
 
-<header class="nav">
-    <div class="logo">Alex</div>
+    <div class="choices">
+        <button onclick="playGame('rock')">👊</button>
+        <button onclick ="playGame('paper')">✋</button>
+        <button onclick="playGame('scissors')">✌</button>
+    </div>
 
-    <nav class="details">
-        <ul class="l">
-            <li>Home</li>
-            <li>Services</li>
-            <li>Skills</li>
-            <li>Education</li>
-            <li>Experience</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
-</header>
-
-<main class="hero-section">
-    <section class="profile-pic">
-        <img src="poop.png" loading="lazy">
-    </section>
-
-    <section class="profile-pitch">
-        <h1>Hi, Its Alex</h1>
-        <h2>I'm a Web Developer</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reprehenderit doloremque unde vel laudantium at, architecto ratione magni nostrum sapiente voluptate quis esse iste beatae.</p>
-
-        <div class="icons">
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            <a href=""><i class="fa-brands fa-github"></i></a>
-            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-        </div>
-
-        <div class="btn-div">
-            <a href="mailto:eren.akatsuki7@gmail.com"><button class="btn">Hire Me</button></a>
-        </div>
-    </section>
-</main>
+    <div id="playerDisplay">PLAYER:</div>
+    <div id="computerDisplay">COMPUTER:</div>
+    <div id="resultDisplay"></div>
 
 
+    <div class="scoreDisplay">Player Score:
+        <span id="playerScoreDisplay">0</span>
+    </div>
+
+    <div class="scoreDisplay">Computer Score:
+        <span id="computerScoreDisplay">0</span>
+    </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,54 +1,565 @@
-body{
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: gilroy;
+    src: url(fonts/Gilroy-ExtraBold.otf);
+}
+
+#nav{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 50px;
+    height: 145px;
+    width: 100%;
+    padding: 0px 150px;
+    /* background-color: black; */
+    position: fixed;
+    z-index: 99;
 
 }
 
-h1{
-    font-size: 3.5rem;
-    color: hsl(0, 0%, 20%);
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(149, 193, 30);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    transition: scale ease 0.4s;
+
 }
 
-.choices{
+#cursor-blur{
+    height: 500px;
+    width: 500px;
+    background-color: rgba(150, 193, 30, 0.157);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+
+}
+
+
+
+
+#nav img{
+    height: 70px;
+    scale: 1;
+    transition: scale ease 0.5s;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+
+}
+
+#page1 #arrow{
+    height: 250px;
+    width: 250px;
+    background-color: transparent;
+    border: 2px solid #95C11E;
+    position: absolute;
+    left: -2%;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+
+#page1 #arrow:hover{
+    scale: 0.4;
+    background-color: #95C11E;
+}
+
+
+#page1 #arrow i{
+    font-size: 60px;
+    font-weight: 100;
+}
+
+
+#page1 h1{
+    font-size: 130px;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h2{
+    font-size: 33px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+}
+#page1 p{
+    font-size: 17px;
+    line-height: 1.375;
+    font-weight: 400;
+    width: 37%;
+    text-align: center;
+    line-height: 1.35;
+}
+
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    color: black;
+    -webkit-text-stroke: 2px rgb(149, 193, 30);
+    z-index: -1;
+}
+
+
+#page1 h1::selection{
+    background-color: #fff;
+    color:hsl(76, 73%, 44%)    
+}
+#page1 h2::selection{
+    background-color: #fff;
+    color:hsl(76, 73%, 44%)
+}
+#page1 p::selection{
+    background-color: #fff;
+    color:hsl(76, 73%, 44%)
+}
+
+
+
+
+
+#page2{
+    min-height: 100vh;
+    /* height: 100vh; */
+    width: 100%;
+    z-index: 10;
+}
+
+
+
+
+
+
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+#scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-family: 'gilroy';
+    font-weight: 900;
+    margin-left: 10px;
+    /* font-family: gilroy; */
+    color: #000;
+    -webkit-text-stroke: 2px #ffff;;
+    transition: all linear 0.5s;
+
+    
+
+}
+
+#scroller h4:hover{
+    color:hsl(76, 73%, 44%);
+
+
+}
+
+
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+
+@keyframes scroll {
+    from{
+        transform: translateZ(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+#about-us{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+}
+
+#about-us img{
+    height: 210px;
+    width: 210px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#about-us-in{
+    width: 48%;
+    text-align: center;
+}
+
+#about-us-in h3{
+    font-size: 48px;
+    font-weight: 800;
     margin-bottom: 30px;
 }
 
-.choices button{
-    font-size: 7.5rem;
-    min-width:160px ;
-    margin: 0 10px;
-    border-radius: 250px;
-    background-color: hsl(200, 100%, 50%);
-    cursor: pointer;
-    transition: background-color 0.5s ease;
+#about-us-in p{
+    font-size: 18px;
+    line-height: 35px;
+
+
 }
 
-.choices button:hover{
-    background-color: hsl(200, 100%, 70%);
+#about-us-in p::selection{
+    background-color: #fff;
+    color:hsl(76, 73%, 44%)
 }
 
-#playerDisplay, #computerDisplay{
-    font-size: 2.5rem;
+#about-us-in h3::selection{
+    background-color: #fff;
+    color:hsl(76, 73%, 44%)
 }
 
-#resultDisplay{
-    font-size: 5rem;
-    margin: 30px 0px;
+
+
+
+#about-us-in #p1{
+    margin-bottom: 10px;
+
 }
 
-.scoreDisplay{
-    font-size: 2rem;
+
+
+#cards-container{
+    margin-top: 50px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px ;
+    
 }
 
-.greenText, #playerScoreDisplay{
-    color: rgb(156, 248, 156);
+.card{
+    height: 90%;
+    width: 24%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center; 
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    transition: all ease 0.3s;
+    margin-bottom: 150px;
+
 }
 
-.redText, #computerScoreDisplay{
-    color: rgb(250, 94, 94);
+#card1{
+    background-image: url('https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&w=896');
+
 }
 
+#card2{
+    background-image: url('https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&w=840');
+
+}
+
+#card3{
+    background-image: url('https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&w=896');
+
+}
+
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #B0DF34;
+    padding: 50px;
+    padding-top: 140px;
+    opacity: 0;
+    transition: all ease 0.3s;
+
+}
+
+.overlay h4{
+    color: #000;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    white-space: nowrap;
+
+}
+
+
+.overlay p{
+    color: #000;
+    font-size: 18px;
+
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+
+
+#green-div{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom,  #0F9F3A,#A5D621);
+    position: relative;
+    z-index: 10;
+}
+
+#green-div h4{
+    width: 45%;
+    font-size: 27px;
+    line-height: 43px;
+    text-align: center;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 10%;
+
+}
+
+#page3{
+    height: 100vh;       
+    width: 100%;
+    /* background-color: #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+#page3 > p{
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 45px;
+    text-transform: uppercase;
+    width: 60%;
+    text-align: center;
+
+}
+
+#page3 img{
+    position: absolute;
+    height: 60px;
+}
+
+#page3 #colon1{
+    left: 13%;
+    top: 24%;
+}
+
+#page3 #colon2{
+    bottom: 33%;
+    right: 10%;
+}
+
+#page4{
+    height: 30vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.elem{
+    height:70%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    color: #000;
+    font-weight: 800;
+    font-size: 35px;
+    background-color: #A5D621;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 0.5s;
+
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    transition: all ease 0.5s;
+
+}
+
+.elem:hover h2{
+    color: #fff;
+    background-color: transparent;
+}
+
+.elem:hover img{
+    scale: 1;
+}
+
+#page4 h1{
+    font-size: 6.4vw;
+    font-weight: 900;
+    position: absolute;
+    top: -20%;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+    font-family: 'gilroy';
+}
+
+#footer{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119F3A, #ACE022);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    padding: 0 100px;
+    z-index: 10;
+    
+}
+
+#footer>img{
+    position: absolute;
+    height: 40%;
+    left: 0.5;
+    z-index: 0;
+  
+}
+
+#f1 img{
+    height: 100%;
+}
+
+#f1, f2, f3,f4{
+    width:fit-content;
+    position: relative;
+    z-index: 2;
+    margin-right: 120px;
+    margin-left: 90px;
+}
+
+#f2 h3{
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+
+#f3 h3{
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+
+#f4 h3{
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    line-height: 20px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+
+#f4 p{
+    font-size: 1vw;
+    color: #000;
+    font-weight: 700;
+}

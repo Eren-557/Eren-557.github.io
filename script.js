@@ -44,8 +44,8 @@ document.addEventListener("mousemove", function(dets) {
 function animate1() {
 
     // Move 10% closer to the mouse every frame
-    crsrX1 += (mouseX1 - crsrX1) * 0.1;
-    crsrY1 += (mouseY1 - crsrY1) * 0.1;
+    crsrX1 += (mouseX1 - crsrX1) * 0.03;
+    crsrY1 += (mouseY1 - crsrY1) * 0.03;
     //         ↑ this is the gap
 
     crsrblur.style.left = `${crsrX1}px`;
@@ -55,9 +55,6 @@ function animate1() {
 }
 
 animate1(); // start the loop
-
-
-
 
 
 gsap.to("#nav",{
@@ -155,3 +152,21 @@ function postSlideImg() {
 
 postSlideImg();
 postSlideImg();
+
+
+let nav_h4all = document.querySelectorAll("#nav-1 h4, #nav-1 img, #nav-2 button, .overlay, #image-description button, #inner-text, #inner-posts .post, .elem h2, #f1 img, #f1 i, #f2 h3, #f3 h3, #f4 h3, #lastText, #lastText2")
+nav_h4all.forEach((elem)=>{
+    elem.addEventListener("mouseenter", function() {
+        crsr.style.scale = 3.5;
+        crsr.style.border ="1px solid #eee";
+        crsr.style.backgroundColor = "transparent";
+
+    })
+    elem.addEventListener("mouseleave", function() {
+        crsr.style.scale = 1;
+        crsr.style.border ="0px solid rgb(149, 193, 30)"
+        crsr.style.backgroundColor = "rgb(149, 193, 30)"
+
+    })
+
+})

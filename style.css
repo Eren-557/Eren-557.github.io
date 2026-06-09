@@ -36,7 +36,13 @@ html,body{
 }
 
 #nav-1 img{
-    height: 60px;
+    height: 70px;
+    scale: 1;
+    transition: all ease 0.5s;
+}
+
+#nav-1 img:hover{
+    scale:0.9
 }
 
 #nav-1 h4{
@@ -44,6 +50,7 @@ html,body{
     font-size: 14px;
     font-weight: 500;
 }
+
 
 #nav-2 .nav-btn{
     padding: 12px 27px;
@@ -146,6 +153,10 @@ video{
     border-radius: 50%;
     position: fixed;
     z-index: 99;
+    pointer-events: none;
+     transition: scale 0.3s ease,
+                background-color 0.3s ease,
+                border 0.3s ease;
 }
 
 #crsr-blur{
@@ -156,6 +167,7 @@ video{
     border-radius: 50%;
     position: fixed;
     z-index: 9;
+    pointer-events: none;
 }
 
 
@@ -237,6 +249,7 @@ video{
     padding: 0px 25px;
     align-items: center;
     justify-content: space-around;
+    position: relative;
     z-index: 10;
 
 }
@@ -263,14 +276,23 @@ video{
 
 }
 
+#about-us #about-us-in h3::selection{
+    color: #8FBD1D;
+    background-color: #eee;
+}
+
+
 #about-us #about-us-in p{
     font-size: 18px;
     line-height: 1.7;
 
 }
 
+#about-us #about-us-in p::selection{
+    color: #8FBD1D;
+    background-color: #eee;
 
-
+}
 
 
 
@@ -352,7 +374,7 @@ video{
     left: 0;
     padding: 20px;
     width: 100%;
-    z-index: 2;
+    z-index: 10;
 
     text-transform: uppercase;
     color: #eee;
@@ -369,6 +391,7 @@ video{
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(to left bottom, #1FA337,#ABDD22);
+    position: relative;
     z-index: 10;
 
 }
@@ -387,9 +410,18 @@ video{
     color: #000;
     font-weight: 900;
     line-height: 1.5;
+    position: relative;
     z-index: 10;
 
 }
+
+#green-div h4::selection{
+    color: #8FBD1D;
+    background-color: #eee;
+
+}
+
+
 
 
 #page3{
@@ -439,6 +471,13 @@ video{
     line-height: 1.7;
     margin-top: 25px;
 }
+
+
+#image-description h2::selection,p::selection{
+    color: #8FBD1D;
+    background-color: #eee;
+}
+
 
 #image-description button{
     margin-top: 20px;
@@ -606,15 +645,18 @@ video{
     z-index: 10;
 }
 
+.elem::selection{
+    color: #8FBD1D;
+    background-color: #eee;
+}
+
+
 .elem img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition: all ease 0.5s;  
     scale: 1.1;
-
-
-
 }
 
 #page5 h1{
@@ -625,9 +667,14 @@ video{
     color: #000;
     -webkit-text-stroke: 3px #eee;
     paint-order: stroke fill;
-    
 
 }
+
+#page5 h1::selection{
+    background-color: #eee;
+}
+
+
 
 .elem:hover h2{
     background-color: transparent;
@@ -659,17 +706,26 @@ video{
 #f1 img{
     height: 80px;
     margin-left: 20px;
+    scale: 1;
+    transition: all ease 0.5s;
+    cursor: pointer;
 }
+
+#f1 img:hover{
+    scale: 0.9;
+}
+
 
 #f1 i{
     font-size: 30px;
     color: #000;
+    cursor: pointer;
 
 }
 
 #icon{
     margin-left: 20px;
-    z-index: 1;
+    z-index: 10;
 }
 
 
@@ -685,6 +741,7 @@ video{
     
 }
 
+
 #f2 h3{
     color: #000;
     font-size: 28px;
@@ -694,6 +751,11 @@ video{
     white-space: nowrap;
     
 }
+
+#f2 h3:hover{
+    color: #eee;
+}
+
 #f3 h3{
     color: #000;
     font-size: 28px;
@@ -702,6 +764,11 @@ video{
     margin-bottom: 7px;
     white-space: nowrap;
 }
+
+#f3 h3:hover{
+    color: #eee;
+}
+
 
 #f4 h3{
     color: #000;
@@ -716,6 +783,27 @@ video{
     text-transform: uppercase;
     font-weight: 600;
 }
+
+#f4 h3:hover{
+    color: #eee;
+}
+
+
+#footer h3::selection{
+    color: #8FBD1D;
+    background-color: #eee;
+}
+
+#footer p::selection{
+    color: #8FBD1D;
+    background-color: #eee;
+}
+
+#footer img::selection{
+    color: #8FBD1D;
+    background-color: #eee;
+}
+
 
 #lastText{
     font-size: 13px;
@@ -733,3 +821,4 @@ video{
     font-weight: 500;
     color: #000;
 }
+
